@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragliding in Ruhpolding - Soar Above the Bavarian Alps | ExploreRuhpolding</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <section id="header">
+        <a href="homepage.html"><h2 class="logo">ExploreRuhpolding</h2></a>
+        
+        <div>
+            <ul id="navbar">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="trailrunning.html">Trail Running</a></li>
+                <li><a href="mountainbiking.html">Mountain Biking</a></li>
+                <li><a href="climbing.html">Climbing</a></li>
+                <li><a class="active" href="paragliding.html">Paragliding</a></li>
+                <li><a href="skiing.html">Skiing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="language-toggle">
+                    <button id="lang-toggle" onclick="toggleLanguage()">
+                        <i class="fas fa-globe"></i> EN/DE
+                    </button>
+                </li>
+                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <!-- Sport Hero Section -->
+    <section class="sport-hero">
+        <h1 data-en="Paragliding in Ruhpolding" data-de="Paragliding in Ruhpolding">
+            Paragliding in Ruhpolding
+        </h1>
+        <p data-en="Soar above the stunning Bavarian Alps and experience the ultimate freedom with breathtaking panoramic views over the Chiemgau region." 
+           data-de="Schwebe über die atemberaubenden Bayerischen Alpen und erlebe ultimative Freiheit mit spektakulären Panoramablicken über die Chiemgau-Region.">
+           Soar above the stunning Bavarian Alps and experience the ultimate freedom with breathtaking panoramic views over the Chiemgau region.
+        </p>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section-p1">
+    <div class="sport-content">
+        <div class="content-text">
+            <h2 data-en="Alpine Paragliding Paradise" data-de="Alpines Paragliding-Paradies">
+                Alpine Paragliding Paradise
+            </h2>
+
+            <p data-en="Ruhpolding is one of Germany’s most scenic free-flight arenas. Steady thermals, generous launch meadows and a dramatic 360° alpine panorama make it perfect for both first-timers and seasoned pilots."
+               data-de="Ruhpolding zählt zu Deutschlands malerischsten Fluggebieten. Beständige Thermik, weitläufige Startwiesen und ein dramatisches 360°-Alpenpanorama machen den Ort ideal für Erstflieger wie auch erfahrene Piloten.">
+               Ruhpolding is one of Germany’s most scenic free-flight arenas. Steady thermals, generous launch meadows and a dramatic 360° alpine panorama make it perfect for both first-timers and seasoned pilots.
+            </p>
+
+            <div class="highlights">
+                <h3 data-en="Paragliding Highlights" data-de="Paragliding-Highlights">Paragliding Highlights</h3>
+                <ul>
+                    <li data-en="3 launch sites up to 1,200 m ASL"           data-de="3 Startplätze bis 1.200 m ü. NN">3 launch sites up to 1,200 m ASL</li>
+                    <li data-en="Reliable thermals for flights > 1 h"         data-de="Zuverlässige Thermik für Flüge > 1 h">Reliable thermals for flights > 1 h</li>
+                    <li data-en="Certified tandem & solo instructors"         data-de="Zertifizierte Tandem- & Sololehrer">Certified tandem & solo instructors</li>
+                    <li data-en="360° vistas of lakes, peaks and forests"     data-de="360°-Blicke auf Seen, Gipfel, Wälder">360° vistas of lakes, peaks and forests</li>
+                    <li data-en="Full equipment rental & shuttle service"     data-de="Kompletter Ausrüstungsverleih & Shuttle">Full equipment rental & shuttle service</li>
+                    <li data-en="Flyable almost year-round (Mar – Nov best)"  data-de="Fast ganzjährig fliegbar (Mär – Nov ideal)">Flyable almost year-round (Mar – Nov best)</li>
+                </ul>
+            </div>
+
+            <p data-en="From gentle evening glass-offs perfect for photography to adrenaline-pumping thermic climbs, Ruhpolding has a launch window for every taste. After landing, enjoy Bavarian hospitality in traditional mountain huts scattered along the valley floor."
+               data-de="Von ruhigen Abendflügen, ideal für spektakuläre Fotos, bis zu thermikgeladenen Adrenalin-Kreisen bietet Ruhpolding ein Startfenster für jeden Geschmack. Nach der Landung lockt bayerische Gastfreundschaft in urigen Almhütten im Tal.">
+               From gentle evening glass-offs perfect for photography to adrenaline-pumping thermic climbs, Ruhpolding has a launch window for every taste. After landing, enjoy Bavarian hospitality in traditional mountain huts scattered along the valley floor.
+            </p>
+        </div>
+
+        <div class="map-container">
+            <div id="sport-map"></div>
+        </div>
+    </div>
+</section>
+    <!-- Tours Section -->
+  <section id="tours-section" class="tours-section section-p1">
+    <div class="section-header">
+        <h2 data-en="Paragliding Experiences & Rentals" data-de="Paragliding-Erlebnisse & Verleih">
+            Paragliding Experiences & Rentals
+        </h2>
+        <p data-en="Book tandem flights, training courses or high-quality gear for your alpine adventure"
+           data-de="Buche Tandemflüge, Ausbildungskurse oder hochwertiges Equipment für dein Alpenabenteuer">
+           Book tandem flights, training courses or high-quality gear for your alpine adventure
+        </p>
+    </div>
+
+    <div class="tours-container">
+        <!-- Tandem Flight -->
+        <div class="tour-card">
+            <picture class="tour-image">
+                    <source srcset="img/paragliding_flight.jpg" type="image/webp">
+                    <img src="img/paragliding_flight.jpg"
+                    alt="Tandem Paragliding Flight over the Bavarian Alps"
+                    loading="lazy">
+                </picture>
+            <div class="tour-info">
+                <h3 data-en="Tandem Paragliding Flight" data-de="Tandem-Paragliding Flug">Tandem Paragliding Flight</h3>
+                <p data-en="Soar with a certified instructor and enjoy an unforgettable 15-20 min airborne panorama."
+                   data-de="Fliege mit einem zertifizierten Piloten und genieße 15-20 min unvergessliches Alpenpanorama.">
+                   Soar with a certified instructor and enjoy an unforgettable 15-20 min airborne panorama.
+                </p>
+                <div class="tour-details">
+                    <span data-en="Duration: 2-3 h total" data-de="Dauer: 2-3 h gesamt">Duration: 2-3 h total</span>
+                    <span data-en="Altitude drop: 1,000 m" data-de="Höhendifferenz: 1.000 m">Altitude drop: 1,000 m</span>
+                    <span data-en="Skill: Beginner" data-de="Level: Anfänger">Skill: Beginner</span>
+                </div>
+                <div class="tour-price">€120.00</div>
+                <button class="add-to-cart-btn"
+                        onclick="addToCart({id: 'pg-tandem', name: 'Tandem Paragliding Flight', price: 120, type: 'tour'})"
+                        data-en="Add to Cart" data-de="In Warenkorb">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Basic Course -->
+        <div class="tour-card">
+            <picture class="tour-image">
+                    <source srcset="img/paragliding_course.jpg" type="image/webp">
+                    <img src="img/paragliding_course.jpg"
+                    alt="Paragliding Basic Course with Ground Handling and Solo Flights"
+                    loading="lazy">
+                </picture>
+            <div class="tour-info">
+                <h3 data-en="Paragliding Basic Course" data-de="Paragliding Grundkurs">Paragliding Basic Course</h3>
+                <p data-en="Five-day beginner course covering theory, ground handling and 20+ supervised solo flights. Leads to A-License."
+                   data-de="Fünftägiger Einsteigerkurs mit Theorie, Ground-Handling und 20+ betreuten Alleinflügen. Führt zum A-Schein.">
+                   Five-day beginner course covering theory, ground handling and 20+ supervised solo flights. Leads to A-License.
+                </p>
+                <div class="tour-details">
+                    <span data-en="Duration: 5 days" data-de="Dauer: 5 Tage">Duration: 5 days</span>
+                    <span data-en="Flights: 20+" data-de="Flüge: 20+">Flights: 20+</span>
+                    <span data-en="Certification: A-License" data-de="Zertifikat: A-Schein">Certification: A-License</span>
+                </div>
+                <div class="tour-price">€450.00</div>
+                <button class="add-to-cart-btn"
+                        onclick="addToCart({id: 'pg-course', name: 'Paragliding Basic Course', price: 450, type: 'course'})"
+                        data-en="Add to Cart" data-de="In Warenkorb">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Equipment Rental -->
+        <div class="tour-card">
+            <picture class="tour-image">
+                    <source srcset="img/paragliding_gear.jpg" type="image/webp">
+                    <img src="img/paragliding_gear.jpg"
+                    alt="Full Paragliding Equipment Rental including Wing, Harness, Helmet and Reserve"
+                    loading="lazy">
+                </picture>
+            <div class="tour-info">
+                <h3 data-en="Full Equipment Rental" data-de="Kompletter Ausrüstungsverleih">Full Equipment Rental</h3>
+                <p data-en="Modern wing, harness, helmet and reserve – ready for licensed pilots who want to explore Ruhpolding’s thermals on their own."
+                   data-de="Modernes Segel, Gurtzeug, Helm und Rettung – ideal für lizenzierte Piloten, die Ruhpoldings Thermik selbst erkunden möchten.">
+                   Modern wing, harness, helmet and reserve – ready for licensed pilots who want to explore Ruhpolding’s thermals on their own.
+                </p>
+                <div class="tour-details">
+                    <span data-en="Duration: Full day" data-de="Dauer: Ganzer Tag">Duration: Full day</span>
+                    <span data-en="License: B or higher" data-de="Lizenz: B oder höher">License: B or higher</span>
+                    <span data-en="Includes: Shuttle" data-de="Inkl.: Shuttle">Includes: Shuttle</span>
+                </div>
+                <div class="tour-price">€80.00</div>
+                <button class="add-to-cart-btn"
+                        onclick="addToCart({id: 'pg-rental', name: 'Full Equipment Rental', price: 80, type: 'rental'})"
+                        data-en="Add to Cart" data-de="In Warenkorb">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Customer Review Section -->
+<section class="testimonial-section section-p1">
+  <div class="section-header">
+    <h2 data-en="What Our Guests Say" data-de="Was unsere Gäste sagen">What Our Guests Say</h2>
+  </div>
+  <div class="testimonials-container">
+    <div class="testimonial-card">
+      <p data-en="An unforgettable experience! The tandem flight was smooth and the views were breathtaking. Highly recommended!" 
+         data-de="Ein unvergessliches Erlebnis! Der Tandemflug war sanft und die Aussicht atemberaubend. Sehr zu empfehlen!">
+         An unforgettable experience! The tandem flight was smooth and the views were breathtaking. Highly recommended!
+      </p>
+      <span class="testimonial-name">– Anna M., Berlin</span>
+    </div>
+
+    <div class="testimonial-card">
+      <p data-en="Super professional team and excellent gear. I felt safe and free the whole time. I’ll come back for the advanced course." 
+         data-de="Super professionelles Team und exzellente Ausrüstung. Ich fühlte mich die ganze Zeit sicher und frei. Ich komme für den Fortgeschrittenenkurs wieder.">
+         Super professional team and excellent gear. I felt safe and free the whole time. I’ll come back for the advanced course.
+      </p>
+      <span class="testimonial-name">– Tobias R., München</span>
+    </div>
+
+    <div class="testimonial-card">
+      <p data-en="I was nervous at first, but it was smooth and unforgettable." 
+         data-de="War zuerst nervös, aber es war total entspannt und unvergesslich.">
+         Super professional team and excellent gear. I felt safe and free the whole time. I’ll come back for the advanced course.
+      </p>
+      <span class="testimonial-name">– Daniel P., Landshut</span>
+    </div>
+  </div>
+</section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="section-p1">
+        <div class="newstext">
+            <h4 data-en="Stay Updated" data-de="Bleib auf dem Laufenden">Stay Updated</h4>
+            <p data-en="Get updates about events, tours and <span>special offers</span>" 
+               data-de="Erhalte Updates über Events, Touren und <span>spezielle Angebote</span>">
+               Get updates about events, tours and <span>special offers</span>
+            </p>
+        </div>
+        <div class="form">
+            <input type="email" placeholder="Your email address" data-placeholder-de="Deine E-Mail-Adresse">
+            <button class="normal" data-en="Subscribe" data-de="Abonnieren">Subscribe</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section-p1">
+        <div class="col">
+            <h2 class="logo">ExploreRuhpolding</h2>
+            <h4 data-en="Contact" data-de="Kontakt">Contact</h4>
+            <p><strong data-en="Address:" data-de="Adresse:">Address:</strong> Ruhpolding, Bavaria, Germany</p>
+            <p><strong data-en="Email:" data-de="E-Mail:">Email:</strong> info@exploreruhpolding.com</p>
+            <p><strong data-en="Hours:" data-de="Öffnungszeiten:">Hours:</strong> 08:00 - 18:00, Mon - Sun</p>
+            <div class="follow">
+                <h4 data-en="Follow Us" data-de="Folge uns">Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4 data-en="Quick Links" data-de="Schnelle Links">Quick Links</h4>
+            <a href="about.html" data-en="About Us" data-de="Über uns">About Us</a>
+            <a href="contact.html" data-en="Contact" data-de="Kontakt">Contact</a>
+            <a href="terms.html" data-en="Terms & Conditions" data-de="AGB">Terms & Conditions</a>
+        </div>
+
+        <div class="col">
+            <h4 data-en="Sports" data-de="Sportarten">Sports</h4>
+            <a href="trailrunning.html" data-en="Trail Running" data-de="Trail Running">Trail Running</a>
+            <a href="mountainbiking.html" data-en="Mountain Biking" data-de="Mountainbiking">Mountain Biking</a>
+            <a href="climbing.html" data-en="Climbing" data-de="Klettern">Climbing</a>
+            <a href="paragliding.html" data-en="Paragliding" data-de="Paragliding">Paragliding</a>
+            <a href="skiing.html" data-en="Skiing" data-de="Skifahren">Skiing</a>
+        </div>
+
+        <div class="copyright">
+            <p>© 2025 ExploreRuhpolding</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

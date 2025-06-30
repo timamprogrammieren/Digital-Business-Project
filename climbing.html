@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climbing & Via Ferrata in Ruhpolding - ExploreRuhpolding</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <section id="header">
+        <a href="homepage.html"><h2 class="logo">ExploreRuhpolding</h2></a>
+        
+        <div>
+            <ul id="navbar">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="trailrunning.html">Trail Running</a></li>
+                <li><a href="mountainbiking.html">Mountain Biking</a></li>
+                <li><a class="active" href="climbing.html">Climbing</a></li>
+                <li><a href="paragliding.html">Paragliding</a></li>
+                <li><a href="skiing.html">Skiing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="language-toggle">
+                    <button id="lang-toggle" onclick="toggleLanguage()">
+                        <i class="fas fa-globe"></i> EN/DE
+                    </button>
+                </li>
+                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <!-- Sport Hero Section -->
+    <section class="sport-hero">
+        <h1 data-en="Climbing & Via Ferrata in Ruhpolding" data-de="Klettern & Klettersteig in Ruhpolding">
+            Climbing & Via Ferrata in Ruhpolding
+        </h1>
+        <p data-en="Vertical freedom in the Alps with routes from beginner-friendly crags to challenging multi-pitch climbs and secured via ferrata adventures" 
+           data-de="Vertikale Freiheit in den Alpen mit Routen von anfängerfreundlichen Felsen bis zu anspruchsvollen Mehrseillängen-Klettertouren und gesicherten Klettersteig-Abenteuern">
+           Vertical freedom in the Alps with routes from beginner-friendly crags to challenging multi-pitch climbs and secured via ferrata adventures
+        </p>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section-p1">
+        <div class="sport-content">
+            <div class="content-text">
+                <h2 data-en="Alpine Climbing Paradise" data-de="Alpines Kletterparadies">
+                    Alpine Climbing Paradise
+                </h2>
+                <p data-en="The Chiemgau region around Ruhpolding offers some of Bavaria's finest climbing opportunities, with limestone cliffs, secure via ferrata routes, and alpine climbing adventures. From the famous Klettergarten Ruhpolding to the challenging walls of the surrounding peaks, climbers of all abilities will find their perfect vertical challenge."
+                   data-de="Die Chiemgau-Region um Ruhpolding bietet einige der besten Klettermöglichkeiten Bayerns, mit Kalksteinfelsen, sicheren Klettersteig-Routen und alpinen Kletterabenteuern. Vom berühmten Klettergarten Ruhpolding bis zu den anspruchsvollen Wänden der umliegenden Gipfel finden Kletterer aller Fähigkeiten ihre perfekte vertikale Herausforderung.">
+                    The Chiemgau region around Ruhpolding offers some of Bavaria's finest climbing opportunities, with limestone cliffs, secure via ferrata routes, and alpine climbing adventures. From the famous Klettergarten Ruhpolding to the challenging walls of the surrounding peaks, climbers of all abilities will find their perfect vertical challenge.
+                </p>
+                
+                <div class="highlights">
+                    <h3 data-en="Climbing Highlights" data-de="Kletter-Highlights">Climbing Highlights</h3>
+                    <ul>
+                        <li data-en="Over 50 sport climbing routes" data-de="Über 50 Sportkletterrouten">Over 50 sport climbing routes</li>
+                        <li data-en="3 secured via ferrata routes" data-de="3 gesicherte Klettersteig-Routen">3 secured via ferrata routes</li>
+                        <li data-en="Difficulty grades from 3 to 8+ UIAA" data-de="Schwierigkeitsgrade von 3 bis 8+ UIAA">Difficulty grades from 3 to 8+ UIAA</li>
+                        <li data-en="Multi-pitch alpine routes" data-de="Mehrseillängen-Alpenrouten">Multi-pitch alpine routes</li>
+                        <li data-en="Family-friendly climbing garden" data-de="Familienfreundlicher Klettergarten">Family-friendly climbing garden</li>
+                        <li data-en="Professional guiding available" data-de="Professionelle Führung verfügbar">Professional guiding available</li>
+                    </ul>
+                </div>
+                
+                <p data-en="Safety is our top priority. All our climbing areas are regularly inspected and maintained. Our certified mountain guides provide instruction for beginners and challenging routes for experienced climbers. The combination of solid limestone, stunning views, and comprehensive safety measures makes Ruhpolding an ideal climbing destination."
+                   data-de="Sicherheit hat bei uns oberste Priorität. Alle unsere Klettergebiete werden regelmäßig inspiziert und gepflegt. Unsere zertifizierten Bergführer bieten Unterricht für Anfänger und anspruchsvolle Routen für erfahrene Kletterer. Die Kombination aus solidem Kalkstein, atemberaubenden Ausblicken und umfassenden Sicherheitsmaßnahmen macht Ruhpolding zu einem idealen Kletterziel.">
+                    Safety is our top priority. All our climbing areas are regularly inspected and maintained. Our certified mountain guides provide instruction for beginners and challenging routes for experienced climbers. The combination of solid limestone, stunning views, and comprehensive safety measures makes Ruhpolding an ideal climbing destination.
+                </p>
+            </div>
+            
+            <div class="map-container">
+                <div id="sport-map"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tours Section -->
+    <section class="tours-section section-p1">
+        <div class="section-header">
+            <h2 data-en="Available Tours & Equipment" data-de="Verfügbare Touren & Ausrüstung">Available Tours & Equipment</h2>
+            <p data-en="Book guided climbing courses or rent professional equipment for your vertical adventure" 
+               data-de="Buche geführte Kletterkurse oder miete professionelle Ausrüstung für dein vertikales Abenteuer">
+               Book guided climbing courses or rent professional equipment for your vertical adventure
+            </p>
+        </div>
+        
+        <div class="tours-container">
+            <!-- Guided Tour 1 -->
+            <div class="tour-card">
+                <picture class="tour-image">
+                    <source srcset="img/climbing_adventure.jpg" type="image/webp">
+                    <img src="img/climbing_adventure.jpg"
+                    alt="Via Ferrata Adventure"
+         l          oading="lazy">
+                </picture>
+                <div class="tour-info">
+                    <h3 data-en="Via Ferrata Adventure" data-de="Klettersteig-Abenteuer">Via Ferrata Adventure</h3>
+                    <p data-en="Secured climbing experience on the famous Rauschberg via ferrata. Perfect introduction to alpine climbing with stunning panoramic views. Includes all safety equipment and professional guidance."
+                       data-de="Gesichertes Klettererlebnis am berühmten Rauschberg Klettersteig. Perfekte Einführung in das Alpinklettern mit atemberaubenden Panoramablicken. Inklusive aller Sicherheitsausrüstung und professioneller Führung.">
+                       Secured climbing experience on the famous Rauschberg via ferrata. Perfect introduction to alpine climbing with stunning panoramic views. Includes all safety equipment and professional guidance.
+                    </p>
+                    <div class="tour-details">
+                        <span data-en="Duration: 4-6 hours" data-de="Dauer: 4-6 Stunden">Duration: 4-6 hours</span>
+                        <span data-en="Difficulty: Moderate" data-de="Schwierigkeit: Mäßig">Difficulty: Moderate</span>
+                        <span data-en="Grade: C/D" data-de="Grad: C/D">Grade: C/D</span>
+                    </div>
+                    <div class="tour-price">€75.00</div>
+                    <button class="add-to-cart-btn" onclick="addToCart({id: 'tour-via-ferrata', name: 'Via Ferrata Adventure', price: 75.00, type: 'tour'})"
+                            data-en="Add to Cart" data-de="In Warenkorb">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Guided Tour 2 -->
+            <div class="tour-card">
+                <picture class="tour-image">
+                    <source srcset="img/climbing_course.jpg" type="image/webp">
+                    <img src="img/climbing_course.jpg"
+                    alt="Beginner Climbing Course"
+                    loading="lazy">
+                </picture>
+                <div class="tour-info">
+                    <h3 data-en="Beginner Climbing Course" data-de="Anfänger-Kletterkurs">Beginner Climbing Course</h3>
+                    <p data-en="Learn the fundamentals of rock climbing in our family-friendly climbing garden. Includes basic techniques, safety procedures, and equipment handling. Perfect for first-time climbers."
+                       data-de="Lerne die Grundlagen des Felskletterns in unserem familienfreundlichen Klettergarten. Inklusive Grundtechniken, Sicherheitsverfahren und Ausrüstungshandhabung. Perfekt für Erstkletterer.">
+                       Learn the fundamentals of rock climbing in our family-friendly climbing garden. Includes basic techniques, safety procedures, and equipment handling. Perfect for first-time climbers.
+                    </p>
+                    <div class="tour-details">
+                        <span data-en="Duration: 3-4 hours" data-de="Dauer: 3-4 Stunden">Duration: 3-4 hours</span>
+                        <span data-en="Difficulty: Beginner" data-de="Schwierigkeit: Anfänger">Difficulty: Beginner</span>
+                        <span data-en="Max: 6 people" data-de="Max: 6 Personen">Max: 6 people</span>
+                    </div>
+                    <div class="tour-price">€55.00</div>
+                    <button class="add-to-cart-btn" onclick="addToCart({id: 'course-beginner', name: 'Beginner Climbing Course', price: 55.00, type: 'course'})"
+                            data-en="Add to Cart" data-de="In Warenkorb">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Equipment Rental -->
+            <div class="tour-card">
+                <picture class="tour-image">
+                    <source srcset="img/climbing_equipment.jpg" type="image/webp">
+                    <img src="img/climbing_equipment.jpg"
+                    alt="Climbing Equipment Rental"
+                    loading="lazy">
+                </picture>
+
+                <div class="tour-info">
+                    <h3 data-en="Climbing Equipment Rental" data-de="Kletterausrüstung Verleih">Climbing Equipment Rental</h3>
+                    <p data-en="Complete climbing gear rental including harness, helmet, climbing shoes, and rope. Professional quality equipment regularly inspected for safety. Perfect for experienced climbers."
+                       data-de="Kompletter Kletterausrüstung-Verleih inklusive Klettergurt, Helm, Kletterschuhe und Seil. Professionelle Qualitätsausrüstung, regelmäßig auf Sicherheit geprüft. Perfekt für erfahrene Kletterer.">
+                       Complete climbing gear rental including harness, helmet, climbing shoes, and rope. Professional quality equipment regularly inspected for safety. Perfect for experienced climbers.
+                    </p>
+                    <div class="tour-details">
+                        <span data-en="Duration: Full day" data-de="Dauer: Ganzer Tag">Duration: Full day</span>
+                        <span data-en="Complete set" data-de="Komplettes Set">Complete set</span>
+                        <span data-en="All sizes available" data-de="Alle Größen verfügbar">All sizes available</span>
+                    </div>
+                    <div class="tour-price">€40.00</div>
+                    <button class="add-to-cart-btn" onclick="addToCart({id: 'rental-climbing-gear', name: 'Climbing Equipment Rental', price: 40.00, type: 'rental'})"
+                            data-en="Add to Cart" data-de="In Warenkorb">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Review Section -->
+<section class="testimonial-section section-p1">
+  <div class="section-header">
+    <h2 data-en="What Our Guests Say" data-de="Was unsere Gäste sagen">What Our Guests Say</h2>
+  </div>
+  <div class="testimonials-container">
+    <div class="testimonial-card">
+      <p data-en="Zinnkopf was the perfect intro to via ferrata – safe, scenic, and rewarding." 
+         data-de="Der Zinnkopf war mein Einstieg in Klettersteige – sicher, schön und wirklich lohnend.">
+         Zinnkopf was the perfect intro to via ferrata – safe, scenic, and rewarding.
+      </p>
+      <span class="testimonial-name">– Nina P., Salzburg</span>
+    </div>
+
+    <div class="testimonial-card">
+      <p data-en="Great for beginners like me. The rock felt secure, and the views were incredible." 
+         data-de="Ideal für Einsteiger wie mich. Sicherer Fels und atemberaubende Aussicht.">
+         Great for beginners like me. The rock felt secure, and the views were incredible.
+      </p>
+      <span class="testimonial-name">– Jonas H., Rosenheim</span>
+    </div>
+
+    <div class="testimonial-card">
+      <p data-en="A calm, uncrowded spot for climbing with real alpine charm." 
+         data-de="Ein ruhiger, unaufgeregter Kletterspot mit echtem Alpinflair.">
+         A calm, uncrowded spot for climbing with real alpine charm.
+      </p>
+      <span class="testimonial-name">– Clara W., München</span>
+    </div>
+  </div>
+</section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="section-p1">
+        <div class="newstext">
+            <h4 data-en="Stay Updated" data-de="Bleib auf dem Laufenden">Stay Updated</h4>
+            <p data-en="Get updates about events, tours and <span>special offers</span>" 
+               data-de="Erhalte Updates über Events, Touren und <span>spezielle Angebote</span>">
+               Get updates about events, tours and <span>special offers</span>
+            </p>
+        </div>
+        <div class="form">
+            <input type="email" placeholder="Your email address" data-placeholder-de="Deine E-Mail-Adresse">
+            <button class="normal" data-en="Subscribe" data-de="Abonnieren">Subscribe</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section-p1">
+        <div class="col">
+            <h2 class="logo">ExploreRuhpolding</h2>
+            <h4 data-en="Contact" data-de="Kontakt">Contact</h4>
+            <p><strong data-en="Address:" data-de="Adresse:">Address:</strong> Ruhpolding, Bavaria, Germany</p>
+            <p><strong data-en="Email:" data-de="E-Mail:">Email:</strong> info@exploreruhpolding.com</p>
+            <p><strong data-en="Hours:" data-de="Öffnungszeiten:">Hours:</strong> 08:00 - 18:00, Mon - Sun</p>
+            <div class="follow">
+                <h4 data-en="Follow Us" data-de="Folge uns">Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4 data-en="Quick Links" data-de="Schnelle Links">Quick Links</h4>
+            <a href="about.html" data-en="About Us" data-de="Über uns">About Us</a>
+            <a href="contact.html" data-en="Contact" data-de="Kontakt">Contact</a>
+            <a href="terms.html" data-en="Terms & Conditions" data-de="AGB">Terms & Conditions</a>
+        </div>
+
+        <div class="col">
+            <h4 data-en="Sports" data-de="Sportarten">Sports</h4>
+            <a href="trailrunning.html" data-en="Trail Running" data-de="Trail Running">Trail Running</a>
+            <a href="mountainbiking.html" data-en="Mountain Biking" data-de="Mountainbiking">Mountain Biking</a>
+            <a href="climbing.html" data-en="Climbing" data-de="Klettern">Climbing</a>
+            <a href="paragliding.html" data-en="Paragliding" data-de="Paragliding">Paragliding</a>
+            <a href="skiing.html" data-en="Skiing" data-de="Skifahren">Skiing</a>
+        </div>
+
+        <div class="copyright">
+            <p>© 2025 ExploreRuhpolding</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Initialize climbing map when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof initClimbingMap === 'function') {
+                initClimbingMap();
+            }
+        });
+    </script>
+</body>
+</html>

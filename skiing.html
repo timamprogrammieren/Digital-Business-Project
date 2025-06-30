@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skiing in Ruhpolding - ExploreRuhpolding</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <section id="header">
+        <a href="homepage.html"><h2 class="logo">ExploreRuhpolding</h2></a>
+        
+        <div>
+            <ul id="navbar">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="trailrunning.html">Trail Running</a></li>
+                <li><a href="mountainbiking.html">Mountain Biking</a></li>
+                <li><a href="climbing.html">Climbing</a></li>
+                <li><a href="paragliding.html">Paragliding</a></li>
+                <li><a class="active" href="skiing.html">Skiing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="language-toggle">
+                    <button id="lang-toggle" onclick="toggleLanguage()">
+                        <i class="fas fa-globe"></i> EN/DE
+                    </button>
+                </li>
+                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <!-- Sport Hero Section -->
+    <section class="sport-hero">
+        <h1 data-en="Winter Sports in Ruhpolding" data-de="Wintersport in Ruhpolding">
+            Winter Sports in Ruhpolding
+        </h1>
+        <p data-en="Experience world-class winter sports in the heart of the Bavarian Alps. From Olympic biathlon venues to pristine cross-country trails, Ruhpolding offers unforgettable winter adventures for all skill levels." 
+           data-de="Erlebe Wintersport von Weltklasse im Herzen der Bayerischen Alpen. Von olympischen Biathlon-Stätten bis hin zu unberührten Langlaufloipen bietet Ruhpolding unvergessliche Winterabenteuer für alle Könnerstufen.">
+           Experience world-class winter sports in the heart of the Bavarian Alps. From Olympic biathlon venues to pristine cross-country trails, Ruhpolding offers unforgettable winter adventures for all skill levels.
+        </p>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section-p1">
+        <div class="sport-content">
+            <div class="content-text">
+                <h2 data-en="Winter Wonderland Adventures" data-de="Winterwunderland-Abenteuer">Winter Wonderland Adventures</h2>
+                
+                <p data-en="Ruhpolding transforms into a winter paradise from December to March, offering some of Europe's finest winter sports facilities. Home to the famous Biathlon World Cup venue, this Alpine destination combines world-class sporting infrastructure with breathtaking natural beauty." 
+                   data-de="Ruhpolding verwandelt sich von Dezember bis März in ein Winterparadies und bietet einige der besten Wintersportanlagen Europas. Als Heimat der berühmten Biathlon-Weltcup-Stätte verbindet dieses alpine Ziel Sportinfrastruktur von Weltklasse mit atemberaubender Naturschönheit.">
+                   Ruhpolding transforms into a winter paradise from December to March, offering some of Europe's finest winter sports facilities. Home to the famous Biathlon World Cup venue, this Alpine destination combines world-class sporting infrastructure with breathtaking natural beauty.
+                </p>
+
+                <p data-en="Whether you're gliding through silent forests on cross-country skis, mastering the art of biathlon, or enjoying family-friendly alpine skiing, Ruhpolding's diverse winter landscape caters to every winter sports enthusiast." 
+                   data-de="Ob Sie auf Langlaufskiern durch stille Wälder gleiten, die Kunst des Biathlons meistern oder familienfreundliches Alpinski genießen - Ruhpoldings vielfältige Winterlandschaft erfüllt die Wünsche jedes Wintersportlers.">
+                   Whether you're gliding through silent forests on cross-country skis, mastering the art of biathlon, or enjoying family-friendly alpine skiing, Ruhpolding's diverse winter landscape caters to every winter sports enthusiast.
+                </p>
+
+                <div class="highlights">
+                    <h3 data-en="Winter Sports Highlights" data-de="Wintersport-Highlights">Winter Sports Highlights</h3>
+                    <ul>
+                        <li data-en="World-famous Biathlon World Cup venue" data-de="Weltberühmte Biathlon-Weltcup-Stätte">World-famous Biathlon World Cup venue</li>
+                        <li data-en="80km of groomed cross-country trails" data-de="80km gespurte Langlaufloipen">80km of groomed cross-country trails</li>
+                        <li data-en="Family-friendly ski areas with modern lifts" data-de="Familienfreundliche Skigebiete mit modernen Liften">Family-friendly ski areas with modern lifts</li>
+                        <li data-en="Snow-sure conditions from December to March" data-de="Schneesichere Bedingungen von Dezember bis März">Snow-sure conditions from December to March</li>
+                        <li data-en="Night skiing and floodlit trails" data-de="Nachtskifahren und beleuchtete Loipen">Night skiing and floodlit trails</li>
+                        <li data-en="Professional ski and equipment rental" data-de="Professioneller Ski- und Ausrüstungsverleih">Professional ski and equipment rental</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <div id="sport-map"></div>
+                <p class="map-caption" data-en="Interactive map showing ski areas, biathlon venues, and cross-country trails around Ruhpolding" 
+                   data-de="Interaktive Karte mit Skigebieten, Biathlon-Stätten und Langlaufloipen rund um Ruhpolding">
+                   Interactive map showing ski areas, biathlon venues, and cross-country trails around Ruhpolding
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tours Section -->
+    <section class="tours-section section-p1">
+        <div class="section-header">
+            <h2 data-en="Winter Tours & Equipment" data-de="Wintertouren & Ausrüstung">Winter Tours & Equipment</h2>
+            <p data-en="Join guided tours or rent premium equipment for your winter adventure" 
+               data-de="Nimm an geführten Touren teil oder miete Premium-Ausrüstung für dein Winterabenteuer">
+               Join guided tours or rent premium equipment for your winter adventure
+            </p>
+        </div>
+
+        <div class="tours-container">
+            <div class="tour-card">
+                <picture class="tour-image">
+                    <source srcset="img/skiing_biathlon.jpg" type="image/webp">
+                    <img src="img/skiing_biathlon.jpg"
+                    alt="Biathlon Taster Course"
+                    loading="lazy">
+                </picture>
+                <div class="tour-info">
+                    <h3 data-en="Biathlon Taster Course" data-de="Biathlon-Schnupperkurs">Biathlon Taster Course</h3>
+                    <p data-en="Learn the basics of biathlon at the world-famous venue. Includes ski instruction and shooting practice with professional guidance." 
+                       data-de="Lerne die Grundlagen des Biathlons an der weltberühmten Stätte. Inklusive Ski-Unterricht und Schießtraining mit professioneller Anleitung.">
+                       Learn the basics of biathlon at the world-famous venue. Includes ski instruction and shooting practice with professional guidance.
+                    </p>
+                    <div class="tour-details">
+                        <span data-en="Duration: 3 hours" data-de="Dauer: 3 Stunden">Duration: 3 hours</span>
+                        <span data-en="Level: Beginner-Intermediate" data-de="Niveau: Anfänger-Fortgeschrittene">Level: Beginner-Intermediate</span>
+                    </div>
+                    <div class="tour-price">€89</div>
+                    <button class="add-to-cart-btn" onclick="addToCart({id: 'biathlon-course', name: 'Biathlon Taster Course', price: 89, type: 'tour'})" 
+                            data-en="Add to Cart" data-de="In den Warenkorb">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <picture class="tour-image">
+                    <source srcset="img/skiing_cross-country.jpg" type="image/webp">
+                    <img src="img/skiing_cross-country.jpg"
+                    alt="Guided Cross-Country Tour"
+                    loading="lazy">
+                </picture>
+                <div class="tour-info">
+                    <h3 data-en="Guided Cross-Country Tour" data-de="Geführte Langlauftour">Guided Cross-Country Tour</h3>
+                    <p data-en="Explore the stunning winter landscape on groomed trails. Perfect for beginners and those wanting to discover new routes." 
+                       data-de="Erkunde die atemberaubende Winterlandschaft auf gespurten Loipen. Perfekt für Anfänger und alle, die neue Routen entdecken möchten.">
+                       Explore the stunning winter landscape on groomed trails. Perfect for beginners and those wanting to discover new routes.
+                    </p>
+                    <div class="tour-details">
+                        <span data-en="Duration: 2.5 hours" data-de="Dauer: 2,5 Stunden">Duration: 2.5 hours</span>
+                        <span data-en="Level: All levels" data-de="Niveau: Alle Stufen">Level: All levels</span>
+                    </div>
+                    <div class="tour-price">€45</div>
+                    <button class="add-to-cart-btn" onclick="addToCart({id: 'xc-tour', name: 'Guided Cross-Country Tour', price: 45, type: 'tour'})" 
+                            data-en="Add to Cart" data-de="In den Warenkorb">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <picture class="tour-image">
+                    <source srcset="img/skiing_gear.jpg" type="image/webp">
+                    <img src="img/skiing_gear.jpg"
+                    alt="Alpine Ski Equipment Rental"
+                    loading="lazy">
+                </picture>
+                <div class="tour-info">
+                    <h3 data-en="Alpine Ski Equipment Rental" data-de="Alpin-Ski Ausrüstungsverleih">Alpine Ski Equipment Rental</h3>
+                    <p data-en="Complete alpine ski set including skis, boots, poles, and helmet. Premium brands with professional fitting service." 
+                       data-de="Komplettes Alpin-Ski-Set inklusive Ski, Schuhe, Stöcke und Helm. Premium-Marken mit professionellem Anpassungsservice.">
+                       Complete alpine ski set including skis, boots, poles, and helmet. Premium brands with professional fitting service.
+                    </p>
+                    <div class="tour-details">
+                        <span data-en="Duration: Full day" data-de="Dauer: Ganzer Tag">Duration: Full day</span>
+                        <span data-en="Includes: Complete set" data-de="Inkludiert: Komplettset">Includes: Complete set</span>
+                    </div>
+                    <div class="tour-price">€35/day</div>
+                    <button class="add-to-cart-btn" onclick="addToCart({id: 'alpine-rental', name: 'Alpine Ski Equipment Rental', price: 35, type: 'equipment'})" 
+                            data-en="Add to Cart" data-de="In den Warenkorb">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Review Section -->
+<section class="testimonial-section section-p1">
+  <div class="section-header">
+    <h2 data-en="What Our Guests Say" data-de="Was unsere Gäste sagen">What Our Guests Say</h2>
+  </div>
+  <div class="testimonials-container">
+    <div class="testimonial-card">
+      <p data-en="Cross-country skiing in Ruhpolding feels like training in a world cup arena – just more relaxed." 
+         data-de="Langlaufen in Ruhpolding fühlt sich an wie Weltcup-Training – nur viel entspannter.">
+         Cross-country skiing in Ruhpolding feels like training in a world cup arena – just more relaxed.
+      </p>
+      <span class="testimonial-name">– Ronaldo K., Mühldorf</span>
+    </div>
+
+    <div class="testimonial-card">
+      <p data-en="Beautifully groomed trails, no crowds, and that real Bavarian winter vibe." 
+         data-de="Top präparierte Loipen, keine Massen und echtes bayerisches Wintergefühl.">
+         Beautifully groomed trails, no crowds, and that real Bavarian winter vibe.
+      </p>
+      <span class="testimonial-name">– Lisa S., Passau</span>
+    </div>
+
+    <div class="testimonial-card">
+      <p data-en="The biathlon range was open to visitors – super cool experience!" 
+         data-de="Die Biathlonanlage war für Besucher geöffnet – ein richtig cooles Erlebnis!">
+         The biathlon range was open to visitors – super cool experience!
+      </p>
+      <span class="testimonial-name">– Noah B., Ulm</span>
+    </div>
+  </div>
+</section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="section-p1">
+        <div class="newstext">
+            <h4 data-en="Stay Updated" data-de="Bleib auf dem Laufenden">Stay Updated</h4>
+            <p data-en="Get updates about winter events, snow conditions and <span>special offers</span>" 
+               data-de="Erhalte Updates über Winter-Events, Schneebedingungen und <span>spezielle Angebote</span>">
+               Get updates about winter events, snow conditions and <span>special offers</span>
+            </p>
+        </div>
+        <div class="form">
+            <input type="email" placeholder="Your email address" data-placeholder-de="Deine E-Mail-Adresse">
+            <button class="normal" data-en="Subscribe" data-de="Abonnieren">Subscribe</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section-p1">
+        <div class="col">
+            <h2 class="logo">ExploreRuhpolding</h2>
+            <h4 data-en="Contact" data-de="Kontakt">Contact</h4>
+            <p><strong data-en="Address:" data-de="Adresse:">Address:</strong> Ruhpolding, Bavaria, Germany</p>
+            <p><strong data-en="Email:" data-de="E-Mail:">Email:</strong> info@exploreruhpolding.com</p>
+            <p><strong data-en="Hours:" data-de="Öffnungszeiten:">Hours:</strong> 08:00 - 18:00, Mon - Sun</p>
+            <div class="follow">
+                <h4 data-en="Follow Us" data-de="Folge uns">Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4 data-en="Quick Links" data-de="Schnelle Links">Quick Links</h4>
+            <a href="about.html" data-en="About Us" data-de="Über uns">About Us</a>
+            <a href="contact.html" data-en="Contact" data-de="Kontakt">Contact</a>
+            <a href="terms.html" data-en="Terms & Conditions" data-de="AGB">Terms & Conditions</a>
+        </div>
+
+        <div class="col">
+            <h4 data-en="Sports" data-de="Sportarten">Sports</h4>
+            <a href="trailrunning.html" data-en="Trail Running" data-de="Trail Running">Trail Running</a>
+            <a href="mountainbiking.html" data-en="Mountain Biking" data-de="Mountainbiking">Mountain Biking</a>
+            <a href="climbing.html" data-en="Climbing" data-de="Klettern">Climbing</a>
+            <a href="paragliding.html" data-en="Paragliding" data-de="Paragliding">Paragliding</a>
+            <a href="skiing.html" data-en="Skiing" data-de="Skifahren">Skiing</a>
+        </div>
+
+        <div class="copyright">
+            <p>© 2025 ExploreRuhpolding</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart - ExploreRuhpolding</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Header -->
+    <section id="header">
+        <a href="homepage.html"><h2 class="logo">ExploreRuhpolding</h2></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="trailrunning.html">Trail Running</a></li>
+                <li><a href="mountainbiking.html">Mountain Biking</a></li>
+                <li><a href="climbing.html">Climbing</a></li>
+                <li><a href="paragliding.html">Paragliding</a></li>
+                <li><a href="skiing.html">Skiing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="language-toggle">
+                    <button id="lang-toggle" onclick="toggleLanguage()">
+                        <i class="fas fa-globe"></i> EN/DE
+                    </button>
+                </li>
+                <li id="lg-bag"><a class="active" href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a class="active" href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <!-- Cart Hero Section -->
+    <section class="sport-hero">
+        <h1 data-en="Your Shopping Cart" data-de="Ihr Warenkorb">Your Shopping Cart</h1>
+        <p data-en="Review and manage the items in your cart before checkout."
+           data-de="Überprüfen und verwalten Sie die Artikel in Ihrem Warenkorb vor dem Checkout.">
+            Review and manage the items in your cart before checkout.
+        </p>
+    </section>
+
+   <!-- Cart Content -->
+<section id="cart-section" class="section-p1">
+  <div class="cart-container">
+    <h1 data-en="Your Cart" data-de="Dein Warenkorb">Your Cart</h1>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-summary">
+      <div class="summary-line">
+        <span data-en="Total:" data-de="Gesamt:">Total:</span>
+        <span id="cart-total">€0.00</span>
+      </div>
+      <button class="checkout-btn" data-en="Proceed to Checkout" data-de="Zur Kasse">Proceed to Checkout</button>
+    </div>
+  </div>
+</section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="section-p1">
+        <div class="newstext">
+            <h4 data-en="Stay Updated" data-de="Bleib auf dem Laufenden">Stay Updated</h4>
+            <p data-en="Get updates about events, tours and <span>special offers</span>"
+               data-de="Erhalte Updates über Events, Touren und <span>spezielle Angebote</span>">
+               Get updates about events, tours and <span>special offers</span>
+            </p>
+        </div>
+        <div class="form">
+            <input type="email" placeholder="Your email address" data-placeholder-de="Deine E-Mail-Adresse" />
+            <button class="normal" data-en="Subscribe" data-de="Abonnieren">Subscribe</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section-p1">
+        <div class="col">
+            <h2 class="logo">ExploreRuhpolding</h2>
+            <h4 data-en="Contact" data-de="Kontakt">Contact</h4>
+            <p><strong data-en="Address:" data-de="Adresse:">Address:</strong> Ruhpolding, Bavaria, Germany</p>
+            <p><strong data-en="Email:" data-de="E-Mail:">Email:</strong> info@exploreruhpolding.com</p>
+            <p><strong data-en="Hours:" data-de="Öffnungszeiten:">Hours:</strong> 08:00 - 18:00, Mon - Sun</p>
+            <div class="follow">
+                <h4 data-en="Follow Us" data-de="Folge uns">Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4 data-en="Quick Links" data-de="Schnelle Links">Quick Links</h4>
+            <a href="about.html" data-en="About Us" data-de="Über uns">About Us</a>
+            <a href="contact.html" data-en="Contact" data-de="Kontakt">Contact</a>
+            <a href="terms.html" data-en="Terms & Conditions" data-de="AGB">Terms & Conditions</a>
+        </div>
+
+        <div class="col">
+            <h4 data-en="Sports" data-de="Sportarten">Sports</h4>
+            <a href="trailrunning.html" data-en="Trail Running" data-de="Trail Running">Trail Running</a>
+            <a href="mountainbiking.html" data-en="Mountain Biking" data-de="Mountainbiking">Mountain Biking</a>
+            <a href="climbing.html" data-en="Climbing" data-de="Klettern">Climbing</a>
+            <a href="paragliding.html" data-en="Paragliding" data-de="Paragliding">Paragliding</a>
+            <a href="skiing.html" data-en="Skiing" data-de="Skifahren">Skiing</a>
+        </div>
+
+        <div class="copyright">
+            <p>© 2025 ExploreRuhpolding</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cartContainer = document.getElementById('cart-container');
+
+            if (cart.length === 0) {
+                cartContainer.innerHTML = `
+                    <p data-en="Your cart is empty."
+                       data-de="Ihr Warenkorb ist leer."
+                       style="text-align: center; font-size: 1.2rem; color: var(--text-light);">
+                        Your cart is empty.
+                    </p>
+                `;
+            } else {
+                const aggregated = {};
+                cart.forEach(item => {
+                    if (!aggregated[item.id]) {
+                        aggregated[item.id] = {
+                            name: item.name,
+                            price: item.price,
+                            quantity: 0
+                        };
+                    }
+                    aggregated[item.id].quantity += 1;
+                });
+
+                let tableHTML = `
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th data-en="Item" data-de="Artikel">Item</th>
+                                <th data-en="Price" data-de="Preis">Price</th>
+                                <th data-en="Quantity" data-de="Menge">Quantity</th>
+                                <th data-en="Total" data-de="Gesamt">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                `;
+                let grandTotal = 0;
+                for (const id in aggregated) {
+                    const it = aggregated[id];
+                    const lineTotal = it.price * it.quantity;
+                    grandTotal += lineTotal;
+                    tableHTML += `
+                        <tr>
+                            <td>${it.name}</td>
+                            <td>€${it.price.toFixed(2)}</td>
+                            <td>${it.quantity}</td>
+                            <td>€${lineTotal.toFixed(2)}</td>
+                        </tr>
+                    `;
+                }
+                tableHTML += `
+                        </tbody>
+                    </table>
+                    <div class="cart-total">
+                        <h3 data-en="Total:" data-de="Gesamt:">Total: €${grandTotal.toFixed(2)}</h3>
+                        <button class="checkout-btn" data-en="Checkout" data-de="Zur Kasse">Checkout</button>
+                    </div>
+                `;
+                cartContainer.innerHTML = tableHTML;
+            }
+        });
+    </script>
+</body>
+</html>

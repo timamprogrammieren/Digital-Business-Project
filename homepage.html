@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExploreRuhpolding - Your Active Getaway in the Bavarian Alps</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <section id="header">
+        <a href="homepage.html"><h2 class="logo">ExploreRuhpolding</h2></a>
+        
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="homepage.html">Home</a></li>
+                <li><a href="trailrunning.html">Trail Running</a></li>
+                <li><a href="mountainbiking.html">Mountain Biking</a></li>
+                <li><a href="climbing.html">Climbing</a></li>
+                <li><a href="paragliding.html">Paragliding</a></li>
+                <li><a href="skiing.html">Skiing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="language-toggle">
+                    <button id="lang-toggle" onclick="toggleLanguage()">
+                        <i class="fas fa-globe"></i> EN/DE
+                    </button>
+                </li>
+                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <div class="hero-video-container">
+                <video class="Diashow Homepage" autoplay muted loop playsinline>
+                    <source src="img\Diashow Homepage.MP4" type="video/mp4">
+                    <source src="video/ruhpolding-hero.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="hero-text">
+                <h1 data-en="Discover Ruhpolding: Your Active Getaway in the Bavarian Alps" 
+                    data-de="Entdecke Ruhpolding: Dein aktiver Urlaub in den Bayerischen Alpen">
+                    Discover Ruhpolding: Your Active Getaway in the Bavarian Alps
+                </h1>
+                <p data-en="Nestled in the scenic Chiemgau region, Ruhpolding is an idyllic Alpine village that perfectly blends nature, tradition, and adventure." 
+                   data-de="Eingebettet in die malerische Chiemgau-Region ist Ruhpolding ein idyllisches Alpendorf, das Natur, Tradition und Abenteuer perfekt verbindet.">
+                   Nestled in the scenic Chiemgau region, Ruhpolding is an idyllic Alpine village that perfectly blends nature, tradition, and adventure.
+                </p>
+                <button class="cta-button" data-en="Start Your Adventure" data-de="Starte Dein Abenteuer">
+                    Start Your Adventure
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sports Overview -->
+    <section id="sports-overview" class="section-p1">
+        <div class="section-header">
+            <h2 data-en="Choose Your Adventure" data-de="Wähle Dein Abenteuer">Choose Your Adventure</h2>
+            <p data-en="Discover world-class outdoor activities in the heart of Bavaria" 
+               data-de="Entdecke Outdoor-Aktivitäten von Weltklasse im Herzen Bayerns">
+               Discover world-class outdoor activities in the heart of Bavaria
+            </p>
+        </div>
+        <div class="sports-container">
+            <div class="sport-card">
+                <div class="sport-image-placeholder">
+                    <img src="img/trailrunning_homepage.jpg" alt="Trail Running Image" class="sport-image">
+                </div>
+                <div class="sport-info">
+                    <h3 data-en="Trail Running" data-de="Trail Running">Trail Running</h3>
+                    <p data-en="Natural flow and alpine challenge through scenic forest paths and panoramic ridge lines." 
+                       data-de="Natürlicher Flow und alpine Herausforderung durch malerische Waldpfade und Panorama-Grate.">
+                       Natural flow and alpine challenge through scenic forest paths and panoramic ridge lines.
+                    </p>
+                    <a href="trailrunning.html" class="sport-link" data-en="Explore Trails" data-de="Entdecke Trails">Explore Trails</a>
+                </div>
+            </div>
+
+            <div class="sport-card">
+                <div class="sport-image-placeholder">
+                    <img src="img/mountainbiking_homepage.jpg" alt="Mountainbiking Image" class="sport-image">
+                </div>
+                <div class="sport-info">
+                    <h3 data-en="Mountain Biking" data-de="Mountainbiking">Mountain Biking</h3>
+                    <p data-en="Over 300km of MTB routes with flow trails, scenic climbs, and gravel loops." 
+                       data-de="Über 300km MTB-Routen mit Flow-Trails, malerischen Anstiegen und Schotter-Schleifen.">
+                       Over 300km of MTB routes with flow trails, scenic climbs, and gravel loops.
+                    </p>
+                    <a href="mountainbiking.html" class="sport-link" data-en="Find Your Route" data-de="Finde Deine Route">Find Your Route</a>
+                </div>
+            </div>
+
+            <div class="sport-card">
+                <div class="sport-image-placeholder">
+                    <img src="img/climbing_homepage.jpg" alt="Climbing Image" class="sport-image">
+                </div>
+                <div class="sport-info">
+                    <h3 data-en="Climbing & Via Ferrata" data-de="Klettern & Klettersteig">Climbing & Via Ferrata</h3>
+                    <p data-en="Vertical freedom in the Alps with routes from beginner to alpine classics." 
+                       data-de="Vertikale Freiheit in den Alpen mit Routen vom Anfänger bis zu alpinen Klassikern.">
+                       Vertical freedom in the Alps with routes from beginner to alpine classics.
+                    </p>
+                    <a href="climbing.html" class="sport-link" data-en="Scale New Heights" data-de="Erklimme neue Höhen">Scale New Heights</a>
+                </div>
+            </div>
+
+            <div class="sport-card">
+                <div class="sport-image-placeholder">
+                    <img src="img/paragliding_homepage.jpg" alt="Paragliding Image" class="sport-image">
+                </div>
+                <div class="sport-info">
+                    <h3 data-en="Paragliding" data-de="Paragliding">Paragliding</h3>
+                    <p data-en="Experience Ruhpolding from the sky with breathtaking views over the Chiemgau Alps." 
+                       data-de="Erlebe Ruhpolding aus der Luft mit atemberaubenden Ausblicken über die Chiemgauer Alpen.">
+                       Experience Ruhpolding from the sky with breathtaking views over the Chiemgau Alps.
+                    </p>
+                    <a href="paragliding.html" class="sport-link" data-en="Take Flight" data-de="Heb ab">Take Flight</a>
+                </div>
+            </div>
+
+            <div class="sport-card">
+                <div class="sport-image-placeholder">
+                    <img src="img/skifahren_homepage.jpg" alt="SKifahren Image" class="sport-image">
+                </div>
+                <div class="sport-info">
+                    <h3 data-en="Winter Sports" data-de="Wintersport">Winter Sports</h3>
+                    <p data-en="Biathlon, cross-country skiing, and alpine adventures in a snowy playground." 
+                       data-de="Biathlon, Langlauf und alpine Abenteuer in einem verschneiten Spielplatz.">
+                       Biathlon, cross-country skiing, and alpine adventures in a snowy playground.
+                    </p>
+                    <a href="skiing.html" class="sport-link" data-en="Hit the Slopes" data-de="Ab auf die Piste">Hit the Slopes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Ruhpolding Section -->
+    <section id="why-ruhpolding" class="section-p1">
+        <div class="content-container">
+            <div class="text-content">
+                <h2 data-en="Why Ruhpolding should be your next Destination" data-de="Warum Ruhpolding Dein nächstes Ziel sein sollte">
+                    Why Ruhpolding should be your next Destination
+                </h2>
+                <div class="feature-grid">
+                    <div class="feature">
+                        <i class="fas fa-medal"></i>
+                        <h4 data-en="World-Class Sports" data-de="Weltklasse-Sport">World-Class Sports</h4>
+                        <p data-en="Famous for biathlon but loved for variety" data-de="Berühmt für Biathlon, geliebt für Vielfalt">Famous for biathlon but loved for variety</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h4 data-en="Perfect Location" data-de="Perfekte Lage">Perfect Location</h4>
+                        <p data-en="Just 90 minutes from Munich" data-de="Nur 90 Minuten von München">Just 90 minutes from Munich</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4 data-en="Year-Round Adventure" data-de="Ganzjährige Abenteuer">Year-Round Adventure</h4>
+                        <p data-en="Activities for every season" data-de="Aktivitäten für jede Jahreszeit">Activities for every season</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-heart"></i>
+                        <h4 data-en="Authentic Bavarian Charm" data-de="Authentischer bayerischer Charme">Authentic Bavarian Charm</h4>
+                        <p data-en="Traditional culture meets modern sports" data-de="Traditionelle Kultur trifft modernen Sport">Traditional culture meets modern sports</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-wrapper">
+    <img src="img/landscape_homepage.jpg" alt="Panoramic view of Ruhpolding" class="landscape-img">
+</div>
+
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="section-p1">
+        <div class="newstext">
+            <h4 data-en="Stay Updated" data-de="Bleib auf dem Laufenden">Stay Updated</h4>
+            <p data-en="Get updates about events, tours and <span>special offers</span>" 
+               data-de="Erhalte Updates über Events, Touren und <span>spezielle Angebote</span>">
+               Get updates about events, tours and <span>special offers</span>
+            </p>
+        </div>
+        <div class="form">
+            <input type="email" placeholder="Your email address" data-placeholder-de="Deine E-Mail-Adresse">
+            <button class="normal" data-en="Subscribe" data-de="Abonnieren">Subscribe</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section-p1">
+        <div class="col">
+            <h2 class="logo">ExploreRuhpolding</h2>
+            <h4 data-en="Contact" data-de="Kontakt">Contact</h4>
+            <p><strong data-en="Address:" data-de="Adresse:">Address:</strong> Ruhpolding, Bavaria, Germany</p>
+            <p><strong data-en="Email:" data-de="E-Mail:">Email:</strong> info@exploreruhpolding.com</p>
+            <p><strong data-en="Hours:" data-de="Öffnungszeiten:">Hours:</strong> 08:00 - 18:00, Mon - Sun</p>
+            <div class="follow">
+                <h4 data-en="Follow Us" data-de="Folge uns">Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4 data-en="Quick Links" data-de="Schnelle Links">Quick Links</h4>
+            <a href="about.html" data-en="About Us" data-de="Über uns">About Us</a>
+            <a href="contact.html" data-en="Contact" data-de="Kontakt">Contact</a>
+            <a href="terms.html" data-en="Terms & Conditions" data-de="AGB">Terms & Conditions</a>
+        </div>
+
+        <div class="col">
+            <h4 data-en="Sports" data-de="Sportarten">Sports</h4>
+            <a href="trailrunning.html" data-en="Trail Running" data-de="Trail Running">Trail Running</a>
+            <a href="mountainbiking.html" data-en="Mountain Biking" data-de="Mountainbiking">Mountain Biking</a>
+            <a href="climbing.html" data-en="Climbing" data-de="Klettern">Climbing</a>
+            <a href="paragliding.html" data-en="Paragliding" data-de="Paragliding">Paragliding</a>
+            <a href="skiing.html" data-en="Skiing" data-de="Skifahren">Skiing</a>
+        </div>
+
+        <div class="copyright">
+            <p>© 2025 ExploreRuhpolding</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trail Running in Ruhpolding - ExploreRuhpolding</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <section id="header">
+        <a href="homepage.html"><h2 class="logo">ExploreRuhpolding</h2></a>
+        
+        <div>
+            <ul id="navbar">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a class="active" href="trailrunning.html">Trail Running</a></li>
+                <li><a href="mountainbiking.html">Mountain Biking</a></li>
+                <li><a href="climbing.html">Climbing</a></li>
+                <li><a href="paragliding.html">Paragliding</a></li>
+                <li><a href="skiing.html">Skiing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="language-toggle">
+                    <button id="lang-toggle" onclick="toggleLanguage()">
+                        <i class="fas fa-globe"></i> EN/DE
+                    </button>
+                </li>
+                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <!-- Sport Hero Section -->
+    <section class="sport-hero">
+        <h1 data-en="Trail Running in Ruhpolding" data-de="Trail Running in Ruhpolding">
+            Trail Running in Ruhpolding
+        </h1>
+        <p data-en="Natural flow and alpine challenge through scenic forest paths and panoramic ridge lines in the heart of the Bavarian Alps" 
+           data-de="Natürlicher Flow und alpine Herausforderung durch malerische Waldpfade und Panorama-Grate im Herzen der Bayerischen Alpen">
+           Natural flow and alpine challenge through scenic forest paths and panoramic ridge lines in the heart of the Bavarian Alps
+        </p>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section-p1">
+        <div class="sport-content">
+            <div class="content-text">
+                <h2 data-en="Discover Alpine Trail Running" data-de="Entdecke Alpine Trail Running">
+                    Discover Alpine Trail Running
+                </h2>
+                <p data-en="Ruhpolding offers trail runners an incredible variety of terrain, from gentle forest paths perfect for beginners to challenging mountain trails that will test even experienced athletes. The combination of well-maintained trails, stunning Alpine scenery, and year-round accessibility makes it a premier destination for trail running enthusiasts."
+                   data-de="Ruhpolding bietet Trail-Läufern eine unglaubliche Vielfalt an Gelände, von sanften Waldpfaden, die perfekt für Anfänger sind, bis hin zu anspruchsvollen Bergpfaden, die selbst erfahrene Athleten herausfordern. Die Kombination aus gut gepflegten Trails, atemberaubender Alpenlandschaft und ganzjähriger Zugänglichkeit macht es zu einem erstklassigen Ziel für Trail-Running-Enthusiasten.">
+                    Ruhpolding offers trail runners an incredible variety of terrain, from gentle forest paths perfect for beginners to challenging mountain trails that will test even experienced athletes. The combination of well-maintained trails, stunning Alpine scenery, and year-round accessibility makes it a premier destination for trail running enthusiasts.
+                </p>
+                
+                <div class="highlights">
+                    <h3 data-en="Trail Highlights" data-de="Trail-Highlights">Trail Highlights</h3>
+                    <ul>
+                        <li data-en="Over 200km of marked trails" data-de="Über 200km markierte Trails">Over 200km of marked trails</li>
+                        <li data-en="Elevation gains from 100m to 1,500m" data-de="Höhenunterschiede von 100m bis 1.500m">Elevation gains from 100m to 1,500m</li>
+                        <li data-en="Technical single tracks and flowing forest paths" data-de="Technische Singletrails und fließende Waldpfade">Technical single tracks and flowing forest paths</li>
+                        <li data-en="Panoramic views of the Chiemgau Alps" data-de="Panoramablicke auf die Chiemgauer Alpen">Panoramic views of the Chiemgau Alps</li>
+                        <li data-en="Trail difficulty from beginner to expert" data-de="Trail-Schwierigkeit von Anfänger bis Experte">Trail difficulty from beginner to expert</li>
+                        <li data-en="Year-round running conditions" data-de="Ganzjährige Laufbedingungen">Year-round running conditions</li>
+                    </ul>
+                </div>
+                
+                <p data-en="Whether you're looking for a peaceful jog through ancient forests or an adrenaline-pumping mountain adventure, our trail network caters to every level of runner. The trails are well-marked and regularly maintained, ensuring both safety and enjoyment for all visitors."
+                   data-de="Ob Sie einen friedlichen Lauf durch uralte Wälder oder ein adrenalingeladenes Bergabenteuer suchen, unser Trail-Netzwerk bietet für jeden Läufer das Richtige. Die Trails sind gut markiert und regelmäßig gepflegt, um Sicherheit und Freude für alle Besucher zu gewährleisten.">
+                    Whether you're looking for a peaceful jog through ancient forests or an adrenaline-pumping mountain adventure, our trail network caters to every level of runner. The trails are well-marked and regularly maintained, ensuring both safety and enjoyment for all visitors.
+                </p>
+            </div>
+            
+            <div class="map-container">
+                <div id="sport-map"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tours Section -->
+    <section class="tours-section section-p1">
+        <div class="section-header">
+            <h2 data-en="Available Tours & Equipment" data-de="Verfügbare Touren & Ausrüstung">Available Tours & Equipment</h2>
+            <p data-en="Book guided tours or rent professional equipment for your trail running adventure" 
+               data-de="Buche geführte Touren oder miete professionelle Ausrüstung für dein Trail-Running-Abenteuer">
+               Book guided tours or rent professional equipment for your trail running adventure
+            </p>
+        </div>
+        
+        <div class="tours-container">
+            <!-- Guided Tour 1 -->
+            <div class="tour-card">
+                <picture class="tour-image">
+                    <source srcset="img/trailrunning_alpine.jpg" type="image/webp">
+                    <img src="img/trailrunning_alpine.jpg"
+                    alt="Alpine Ridge Trail Tour"
+                    loading="lazy">
+                </picture>
+
+                <div class="tour-info">
+                    <h3 data-en="Alpine Ridge Trail Tour" data-de="Alpen-Grat Trail Tour">Alpine Ridge Trail Tour</h3>
+                    <p data-en="Challenging guided tour along the scenic mountain ridges with panoramic views of the Chiemgau region. Perfect for experienced runners."
+                       data-de="Anspruchsvolle geführte Tour entlang der malerischen Berggrate mit Panoramablick auf die Chiemgau-Region. Perfekt für erfahrene Läufer.">
+                       Challenging guided tour along the scenic mountain ridges with panoramic views of the Chiemgau region. Perfect for experienced runners.
+                    </p>
+                    <div class="tour-details">
+                        <span data-en="Duration: 3-4 hours" data-de="Dauer: 3-4 Stunden">Duration: 3-4 hours</span>
+                        <span data-en="Distance: 35km" data-de="Distanz: 35km">Distance: 35km</span>
+                        <span data-en="Difficulty: Advanced" data-de="Schwierigkeit: Fortgeschritten">Difficulty: Advanced</span>
+                    </div>
+                    <div class="tour-price">€45.00</div>
+                    <button class="add-to-cart-btn" onclick="addToCart({id: 'tour-alpine-ridge', name: 'Alpine Ridge Trail Tour', price: 45.00, type: 'tour'})"
+                            data-en="Add to Cart" data-de="In Warenkorb">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Guided Tour 2 -->
+            <div class="tour-card">
+                <picture class="tour-image">
+                    <source srcset="img/trailrunning_forest.jpg" type="image/webp">
+                    <img src="img/trailrunning_forest.jpg"
+                    alt="Forest Discovery Run"
+                    loading="lazy">
+                </picture>
+
+                <div class="tour-info">
+                    <h3 data-en="Forest Discovery Run" data-de="Wald-Entdeckungslauf">Forest Discovery Run</h3>
+                    <p data-en="Gentle guided run through ancient Bavarian forests, perfect for beginners and families. Learn about local flora and fauna."
+                       data-de="Sanfter geführter Lauf durch alte bayerische Wälder, perfekt für Anfänger und Familien. Lerne über lokale Flora und Fauna.">
+                       Gentle guided run through ancient Bavarian forests, perfect for beginners and families. Learn about local flora and fauna.
+                    </p>
+                    <div class="tour-details">
+                        <span data-en="Duration: 2-3 hours" data-de="Dauer: 2-3 Stunden">Duration: 2-3 hours</span>
+                        <span data-en="Distance: 14km" data-de="Distanz: 14km">Distance: 14km</span>
+                        <span data-en="Difficulty: Beginner" data-de="Schwierigkeit: Anfänger">Difficulty: Beginner</span>
+                    </div>
+                    <div class="tour-price">€25.00</div>
+                    <button class="add-to-cart-btn" onclick="addToCart({id: 'tour-forest-discovery', name: 'Forest Discovery Run', price: 25.00, type: 'tour'})"
+                            data-en="Add to Cart" data-de="In Warenkorb">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Equipment Rental -->
+            <div class="tour-card">     
+                <picture class="tour-image">
+                    <source srcset="img/trailrunning_equipment.jpg" type="image/webp">
+                    <img src="img/trailrunning_equipment.jpg"
+                    alt="Trail Running Equipment Rental"
+                    loading="lazy">
+                </picture>
+
+                <div class="tour-info">
+                    <h3 data-en="Trail Running Equipment Rental" data-de="Trail Running Ausrüstungsverleih">Trail Running Equipment Rental</h3>
+                    <p data-en="Complete trail running gear rental including shoes, backpack, hydration system, and safety equipment. All sizes available."
+                       data-de="Kompletter Trail-Running Ausrüstungsverleih inklusive Schuhe, Rucksack, Trinksystem und Sicherheitsausrüstung. Alle Größen verfügbar.">
+                       Complete trail running gear rental including shoes, backpack, hydration system, and safety equipment. All sizes available.
+                    </p>
+                    <div class="tour-details">
+                        <span data-en="Duration: Full day" data-de="Dauer: Ganzer Tag">Duration: Full day</span>
+                        <span data-en="Includes: Shoes & Gear" data-de="Inklusive: Schuhe & Ausrüstung">Includes: Shoes & Gear</span>
+                        <span data-en="All sizes available" data-de="Alle Größen verfügbar">All sizes available</span>
+                    </div>
+                    <div class="tour-price">€35.00</div>
+                    <button class="add-to-cart-btn" onclick="addToCart({id: 'rental-trail-gear', name: 'Trail Running Equipment Rental', price: 35.00, type: 'rental'})"
+                            data-en="Add to Cart" data-de="In Warenkorb">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Review Section -->
+<section class="testimonial-section section-p1">
+  <div class="section-header">
+    <h2 data-en="What Our Guests Say" data-de="Was unsere Gäste sagen">What Our Guests Say</h2>
+  </div>
+  <div class="testimonials-container">
+    <div class="testimonial-card">
+      <p data-en="Incredible views and perfect terrain – exactly what I was looking for after a long work week in the city." 
+         data-de="Unglaubliche Aussicht und perfektes Gelände – genau das, was ich nach einer stressigen Woche gebraucht habe.">
+         Incredible views and perfect terrain – exactly what I was looking for after a long work week in the city.
+      </p>
+      <span class="testimonial-name">– Stefan S., München</span>
+    </div>
+
+    <div class="testimonial-card">
+      <p data-en="Loved the mix of forest paths and elevation – felt like a full-body reset." 
+         data-de="Ich liebe die Mischung aus Waldwegen und Höhenmetern – ein echtes Reset für Körper und Kopf.">
+         Loved the mix of forest paths and elevation – felt like a full-body reset.
+      </p>
+      <span class="testimonial-name">– Anna B., Stuttgart</span>
+    </div>
+
+    <div class="testimonial-card">
+      <p data-en="Great signage, peaceful atmosphere, and the trails were well-maintained." 
+         data-de="Gute Beschilderung, ruhige Atmosphäre und sehr gepflegte Trails.">
+         Super professional team and excellent gear. I felt safe and free the whole time. I’ll come back for the advanced course.
+      </p>
+      <span class="testimonial-name">– Marco C., Nürnberg</span>
+    </div>
+  </div>
+</section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="section-p1">
+        <div class="newstext">
+            <h4 data-en="Stay Updated" data-de="Bleib auf dem Laufenden">Stay Updated</h4>
+            <p data-en="Get updates about events, tours and <span>special offers</span>" 
+               data-de="Erhalte Updates über Events, Touren und <span>spezielle Angebote</span>">
+               Get updates about events, tours and <span>special offers</span>
+            </p>
+        </div>
+        <div class="form">
+            <input type="email" placeholder="Your email address" data-placeholder-de="Deine E-Mail-Adresse">
+            <button class="normal" data-en="Subscribe" data-de="Abonnieren">Subscribe</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section-p1">
+        <div class="col">
+            <h2 class="logo">ExploreRuhpolding</h2>
+            <h4 data-en="Contact" data-de="Kontakt">Contact</h4>
+            <p><strong data-en="Address:" data-de="Adresse:">Address:</strong> Ruhpolding, Bavaria, Germany</p>
+            <p><strong data-en="Email:" data-de="E-Mail:">Email:</strong> info@exploreruhpolding.com</p>
+            <p><strong data-en="Hours:" data-de="Öffnungszeiten:">Hours:</strong> 08:00 - 18:00, Mon - Sun</p>
+            <div class="follow">
+                <h4 data-en="Follow Us" data-de="Folge uns">Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4 data-en="Quick Links" data-de="Schnelle Links">Quick Links</h4>
+            <a href="about.html" data-en="About Us" data-de="Über uns">About Us</a>
+            <a href="contact.html" data-en="Contact" data-de="Kontakt">Contact</a>
+            <a href="terms.html" data-en="Terms & Conditions" data-de="AGB">Terms & Conditions</a>
+        </div>
+
+        <div class="col">
+            <h4 data-en="Sports" data-de="Sportarten">Sports</h4>
+            <a href="trailrunning.html" data-en="Trail Running" data-de="Trail Running">Trail Running</a>
+            <a href="mountainbiking.html" data-en="Mountain Biking" data-de="Mountainbiking">Mountain Biking</a>
+            <a href="climbing.html" data-en="Climbing" data-de="Klettern">Climbing</a>
+            <a href="paragliding.html" data-en="Paragliding" data-de="Paragliding">Paragliding</a>
+            <a href="skiing.html" data-en="Skiing" data-de="Skifahren">Skiing</a>
+        </div>
+
+        <div class="copyright">
+            <p>© 2025 ExploreRuhpolding</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

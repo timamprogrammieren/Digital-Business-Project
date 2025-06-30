@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Biking in Ruhpolding - ExploreRuhpolding</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <section id="header">
+        <a href="homepage.html"><h2 class="logo">ExploreRuhpolding</h2></a>
+        
+        <div>
+            <ul id="navbar">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="trailrunning.html">Trail Running</a></li>
+                <li><a class="active" href="mountainbiking.html">Mountain Biking</a></li>
+                <li><a href="climbing.html">Climbing</a></li>
+                <li><a href="paragliding.html">Paragliding</a></li>
+                <li><a href="skiing.html">Skiing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="language-toggle">
+                    <button id="lang-toggle" onclick="toggleLanguage()">
+                        <i class="fas fa-globe"></i> EN/DE
+                    </button>
+                </li>
+                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <!-- Sport Hero Section -->
+    <section class="sport-hero">
+        <h1 data-en="Mountain Biking in Ruhpolding" data-de="Mountainbiking in Ruhpolding">
+            Mountain Biking in Ruhpolding
+        </h1>
+        <p data-en="Experience the thrill of alpine single tracks, flowing forest trails, and technical descents through the stunning Bavarian countryside" 
+           data-de="Erlebe den Nervenkitzel alpiner Singletrails, fließender Waldwege und technischer Abfahrten durch die atemberaubende bayerische Landschaft">
+           Experience the thrill of alpine single tracks, flowing forest trails, and technical descents through the stunning Bavarian countryside
+        </p>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section-p1">
+        <div class="sport-content">
+            <div class="content-text">
+                <h2 data-en="Alpine Mountain Biking Paradise" data-de="Alpines Mountainbike-Paradies">
+                    Alpine Mountain Biking Paradise
+                </h2>
+                <p data-en="Ruhpolding is a true paradise for mountain bikers of all skill levels. From gentle family-friendly trails winding through meadows and forests to extreme downhill tracks that challenge even professional riders, our region offers an unparalleled variety of terrain and experiences."
+                   data-de="Ruhpolding ist ein wahres Paradies für Mountainbiker aller Könnensstufen. Von sanften familienfreundlichen Trails durch Wiesen und Wälder bis hin zu extremen Downhill-Strecken, die selbst Profi-Fahrer herausfordern, bietet unsere Region eine unvergleichliche Vielfalt an Gelände und Erlebnissen.">
+                    Ruhpolding is a true paradise for mountain bikers of all skill levels. From gentle family-friendly trails winding through meadows and forests to extreme downhill tracks that challenge even professional riders, our region offers an unparalleled variety of terrain and experiences.
+                </p>
+                
+                <div class="highlights">
+                    <h3 data-en="Biking Highlights" data-de="Bike-Highlights">Biking Highlights</h3>
+                    <ul>
+                        <li data-en="150km of marked mountain bike trails" data-de="150km markierte Mountainbike-Trails">150km of marked mountain bike trails</li>
+                        <li data-en="Flow trails, single tracks, and downhill courses" data-de="Flow-Trails, Singletrails und Downhill-Strecken">Flow trails, single tracks, and downhill courses</li>
+                        <li data-en="Bike parks with jumps and technical features" data-de="Bikeparks mit Sprüngen und technischen Features">Bike parks with jumps and technical features</li>
+                        <li data-en="Panoramic alpine routes up to 1,800m elevation" data-de="Panorama-Alpenrouten bis 1.800m Höhe">Panoramic alpine routes up to 1,800m elevation</li>
+                        <li data-en="All-mountain, cross-country, and enduro options" data-de="All-Mountain, Cross-Country und Enduro-Optionen">All-mountain, cross-country, and enduro options</li>
+                        <li data-en="Professional bike rental and repair services" data-de="Professioneller Bikeverleih und Reparaturservice">Professional bike rental and repair services</li>
+                    </ul>
+                </div>
+                
+                <p data-en="Our trail network is designed and maintained by experienced riders, ensuring optimal flow and safety. Whether you prefer cross-country endurance rides, technical all-mountain adventures, or gravity-fed downhill thrills, you'll find your perfect trail in Ruhpolding."
+                   data-de="Unser Trail-Netzwerk wird von erfahrenen Fahrern entworfen und gepflegt, um optimalen Flow und Sicherheit zu gewährleisten. Ob du Cross-Country-Ausdauerfahrten, technische All-Mountain-Abenteuer oder schwerkraftgetriebene Downhill-Thrills bevorzugst, in Ruhpolding findest du deinen perfekten Trail.">
+                    Our trail network is designed and maintained by experienced riders, ensuring optimal flow and safety. Whether you prefer cross-country endurance rides, technical all-mountain adventures, or gravity-fed downhill thrills, you'll find your perfect trail in Ruhpolding.
+                </p>
+            </div>
+            
+            <div class="map-container">
+                <div id="sport-map"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tours Section -->
+    <section class="tours-section section-p1">
+        <div class="section-header">
+            <h2 data-en="Available Tours & Bike Rentals" data-de="Verfügbare Touren & Bike-Verleih">Available Tours & Bike Rentals</h2>
+            <p data-en="Join guided tours or rent professional mountain bikes for your alpine adventure" 
+               data-de="Nimm an geführten Touren teil oder miete professionelle Mountainbikes für dein Alpenabenteuer">
+               Join guided tours or rent professional mountain bikes for your alpine adventure
+            </p>
+        </div>
+        
+        <div class="tours-container">
+            <!-- Guided Tour 1 -->
+            <div class="tour-card">
+                <picture class="tour-image">
+                    <source srcset="img/mountainbiking_alpine.jpg" type="image/webp">
+                    <img src="img/mountainbiking_alpine.jpg"
+                    alt="Alpine Summit Trail"
+                    loading="lazy">
+                </picture>
+
+                <div class="tour-info">
+                    <h3 data-en="Alpine Summit Trail" data-de="Alpine Gipfel-Tour">Alpine Summit Trail</h3>
+                    <p data-en="Challenging guided mountain bike tour to alpine peaks with breathtaking 360° views. Includes technical climbs and flowing descents."
+                       data-de="Anspruchsvolle geführte Mountainbike-Tour zu Alpengipfeln mit atemberaubenden 360°-Ausblicken. Inklusive technische Anstiege und fließende Abfahrten.">
+                       Challenging guided mountain bike tour to alpine peaks with breathtaking 360° views. Includes technical climbs and flowing descents.
+                    </p>
+                    <div class="tour-details">
+                        <span data-en="Duration: 6-7 hours" data-de="Dauer: 6-7 Stunden">Duration: 6-7 hours</span>
+                        <span data-en="Distance: 35km" data-de="Distanz: 35km">Distance: 35km</span>
+                        <span data-en="Difficulty: Expert" data-de="Schwierigkeit: Experte">Difficulty: Expert</span>
+                    </div>
+                    <div class="tour-price">€65.00</div>
+                    <button class="add-to-cart-btn" onclick="addToCart({id: 'tour-alpine-summit', name: 'Alpine Summit Trail', price: 65.00, type: 'tour'})"
+                            data-en="Add to Cart" data-de="In Warenkorb">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Guided Tour 2 -->
+            <div class="tour-card">
+                <picture class="tour-image">
+                    <source srcset="img/mountainbiking_family.jpg" type="image/webp">
+                    <img src="img/mountainbiking_family.jpg"
+                    alt="Family Flow Adventure"
+                    loading="lazy">
+                </picture>
+                <div class="tour-info">
+                    <h3 data-en="Family Flow Adventure" data-de="Familien-Flow-Abenteuer">Family Flow Adventure</h3>
+                    <p data-en="Perfect introduction to mountain biking for families and beginners. Gentle trails through forests and meadows with stunning lake views."
+                       data-de="Perfekte Einführung ins Mountainbiking für Familien und Anfänger. Sanfte Trails durch Wälder und Wiesen mit atemberaubenden Seeblicken.">
+                       Perfect introduction to mountain biking for families and beginners. Gentle trails through forests and meadows with stunning lake views.
+                    </p>
+                    <div class="tour-details">
+                        <span data-en="Duration: 3-4 hours" data-de="Dauer: 3-4 Stunden">Duration: 3-4 hours</span>
+                        <span data-en="Distance: 15km" data-de="Distanz: 15km">Distance: 15km</span>
+                        <span data-en="Difficulty: Beginner" data-de="Schwierigkeit: Anfänger">Difficulty: Beginner</span>
+                    </div>
+                    <div class="tour-price">€35.00</div>
+                    <button class="add-to-cart-btn" onclick="addToCart({id: 'tour-family-flow', name: 'Family Flow Adventure', price: 35.00, type: 'tour'})"
+                            data-en="Add to Cart" data-de="In Warenkorb">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Bike Rental -->
+            <div class="tour-card">
+                <picture class="tour-image">
+                    <source srcset="img/mountainbiking_gear.jpg" type="image/webp">
+                    <img src="img/mountainbiking_gear.jpg"
+                    alt="Premium Mountain Bike Rental"
+                    loading="lazy">
+                </picture>
+                <div class="tour-info">
+                    <h3 data-en="Premium Mountain Bike Rental" data-de="Premium Mountainbike-Verleih">Premium Mountain Bike Rental</h3>
+                    <p data-en="High-end mountain bikes including full-suspension enduro bikes, cross-country racers, and e-mountain bikes. All bikes professionally maintained."
+                       data-de="High-End Mountainbikes inklusive vollgefederte Enduro-Bikes, Cross-Country-Racer und E-Mountainbikes. Alle Bikes professionell gewartet.">
+                       High-end mountain bikes including full-suspension enduro bikes, cross-country racers, and e-mountain bikes. All bikes professionally maintained.
+                    </p>
+                    <div class="tour-details">
+                        <span data-en="Duration: Full day" data-de="Dauer: Ganzer Tag">Duration: Full day</span>
+                        <span data-en="Includes: Helmet & Protection" data-de="Inklusive: Helm & Schutzausrüstung">Includes: Helmet & Protection</span>
+                        <span data-en="All sizes & types" data-de="Alle Größen & Typen">All sizes & types</span>
+                    </div>
+                    <div class="tour-price">€45.00</div>
+                    <button class="add-to-cart-btn" onclick="addToCart({id: 'rental-premium-mtb', name: 'Premium Mountain Bike Rental', price: 45.00, type: 'rental'})"
+                            data-en="Add to Cart" data-de="In Warenkorb">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Review Section -->
+<section class="testimonial-section section-p1">
+  <div class="section-header">
+    <h2 data-en="What Our Guests Say" data-de="Was unsere Gäste sagen">What Our Guests Say</h2>
+  </div>
+  <div class="testimonials-container">
+    <div class="testimonial-card">
+      <p data-en="The alpine trails near Ruhpolding are a hidden gem – flowy, quiet, and stunning." 
+         data-de="Die MTB-Strecken rund um Ruhpolding sind ein echter Geheimtipp – flüssig, ruhig und landschaftlich top.">
+         The alpine trails near Ruhpolding are a hidden gem – flowy, quiet, and stunning.
+      </p>
+      <span class="testimonial-name">– Lukas R., Augsburg</span>
+    </div>
+
+    <div class="testimonial-card">
+      <p data-en="It’s so rare to find MTB routes with this much variety just 90 minutes from Munich." 
+         data-de="Selten so abwechslungsreiche Strecken so nah an München erlebt.">
+         It’s so rare to find MTB routes with this much variety just 90 minutes from Munich.
+      </p>
+      <span class="testimonial-name">– Timo T., München</span>
+    </div>
+
+    <div class="testimonial-card">
+      <p data-en="Technical but doable – ideal for weekend riders who want a challenge." 
+         data-de="Technisch, aber machbar – perfekt für ambitionierte Wochenendfahrer.">
+         Technical but doable – ideal for weekend riders who want a challenge.
+      </p>
+      <span class="testimonial-name">– Sophie R., Regensburg</span>
+    </div>
+  </div>
+</section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="section-p1">
+        <div class="newstext">
+            <h4 data-en="Stay Updated" data-de="Bleib auf dem Laufenden">Stay Updated</h4>
+            <p data-en="Get updates about events, tours and <span>special offers</span>" 
+               data-de="Erhalte Updates über Events, Touren und <span>spezielle Angebote</span>">
+               Get updates about events, tours and <span>special offers</span>
+            </p>
+        </div>
+        <div class="form">
+            <input type="email" placeholder="Your email address" data-placeholder-de="Deine E-Mail-Adresse">
+            <button class="normal" data-en="Subscribe" data-de="Abonnieren">Subscribe</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section-p1">
+        <div class="col">
+            <h2 class="logo">ExploreRuhpolding</h2>
+            <h4 data-en="Contact" data-de="Kontakt">Contact</h4>
+            <p><strong data-en="Address:" data-de="Adresse:">Address:</strong> Ruhpolding, Bavaria, Germany</p>
+            <p><strong data-en="Email:" data-de="E-Mail:">Email:</strong> info@exploreruhpolding.com</p>
+            <p><strong data-en="Hours:" data-de="Öffnungszeiten:">Hours:</strong> 08:00 - 18:00, Mon - Sun</p>
+            <div class="follow">
+                <h4 data-en="Follow Us" data-de="Folge uns">Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4 data-en="Quick Links" data-de="Schnelle Links">Quick Links</h4>
+            <a href="about.html" data-en="About Us" data-de="Über uns">About Us</a>
+            <a href="contact.html" data-en="Contact" data-de="Kontakt">Contact</a>
+            <a href="terms.html" data-en="Terms & Conditions" data-de="AGB">Terms & Conditions</a>
+        </div>
+
+        <div class="col">
+            <h4 data-en="Sports" data-de="Sportarten">Sports</h4>
+            <a href="trailrunning.html" data-en="Trail Running" data-de="Trail Running">Trail Running</a>
+            <a href="mountainbiking.html" data-en="Mountain Biking" data-de="Mountainbiking">Mountain Biking</a>
+            <a href="climbing.html" data-en="Climbing" data-de="Klettern">Climbing</a>
+            <a href="paragliding.html" data-en="Paragliding" data-de="Paragliding">Paragliding</a>
+            <a href="skiing.html" data-en="Skiing" data-de="Skifahren">Skiing</a>
+        </div>
+
+        <div class="copyright">
+            <p>© 2025 ExploreRuhpolding</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

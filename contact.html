@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - ExploreRuhpolding</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <section id="header">
+    <a href="homepage.html"><h2 class="logo">ExploreRuhpolding</h2></a>
+    <div>
+      <ul id="navbar">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="trailrunning.html">Trail Running</a></li>
+        <li><a href="mountainbiking.html">Mountain Biking</a></li>
+        <li><a href="climbing.html">Climbing</a></li>
+        <li><a href="paragliding.html">Paragliding</a></li>
+        <li><a href="skiing.html">Skiing</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+        <li class="language-toggle">
+          <button id="lang-toggle" onclick="toggleLanguage()">
+            <i class="fas fa-globe"></i> EN/DE
+          </button>
+        </li>
+        <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+        <a href="#" id="close"><i class="far fa-times"></i></a>
+      </ul>
+    </div>
+    <div id="mobile">
+      <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+      <i id="bar" class="fas fa-outdent"></i>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="sport-hero">
+    <h1 data-en="Get in Touch" data-de="Kontakt aufnehmen">Get in Touch</h1>
+    <p data-en="Ready to explore the Bavarian Alps? We're here to help plan your perfect outdoor adventure."
+       data-de="Bereit, die Bayerischen Alpen zu erkunden? Wir helfen Ihnen gerne bei der Planung Ihres perfekten Outdoor-Abenteuers.">
+       Ready to explore the Bavarian Alps? We're here to help plan your perfect outdoor adventure.
+    </p>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="contact-content">
+    <div class="contact-container">
+      <div class="contact-form-section">
+        <h2 data-en="Send us a Message" data-de="Senden Sie uns eine Nachricht">Send us a Message</h2>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name" data-en="Full Name" data-de="Vollständiger Name">Full Name</label>
+            <input type="text" id="name" name="name" required />
+            <i class="fas fa-user form-icon"></i>
+          </div>
+          <div class="form-group">
+            <label for="email" data-en="Email Address" data-de="E-Mail-Adresse">Email Address</label>
+            <input type="email" id="email" name="email" required />
+            <i class="fas fa-envelope form-icon"></i>
+          </div>
+          <div class="form-group">
+            <label for="phone" data-en="Phone (optional)" data-de="Telefon (optional)">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" />
+            <i class="fas fa-phone form-icon"></i>
+          </div>
+          <div class="form-group">
+            <label for="sport" data-en="Interested in" data-de="Interessiert an">Interested in</label>
+            <select id="sport" name="sport">
+              <option value="" data-en="Choose an option..." data-de="Wähle eine Option...">Choose an option...</option>
+              <option value="trail">Trail Running</option>
+              <option value="bike">Mountain Biking</option>
+              <option value="climb">Climbing</option>
+              <option value="paraglide">Paragliding</option>
+              <option value="ski">Skiing</option>
+              <option value="general" data-en="General Inquiry" data-de="Allgemeine Anfrage">General Inquiry</option>
+            </select>
+            <i class="fas fa-chevron-down form-icon"></i>
+          </div>
+          <div class="form-group">
+            <label for="message" data-en="Message" data-de="Nachricht">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <i class="fas fa-comment form-icon"></i>
+          </div>
+          <button type="submit" class="submit-btn">
+            <span data-en="Send Message" data-de="Nachricht senden">Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="contact-info-section">
+        <h2 data-en="Contact Information" data-de="Kontaktinformationen">Contact Information</h2>
+        <div class="contact-info-cards">
+          <div class="info-card"><i class="fas fa-map-marker-alt"></i><p>Hauptstraße 42, 83324 Ruhpolding</p></div>
+          <div class="info-card"><i class="fas fa-phone"></i><p>+49 8663 123 4567</p></div>
+          <div class="info-card"><i class="fas fa-envelope"></i><p>info@exploreruhpolding.com</p></div>
+          <div class="info-card"><i class="fas fa-clock"></i><p data-en="08:00 - 18:00, Mon - Sun" data-de="08:00 - 18:00, Mo - So">08:00 - 18:00, Mon - Sun</p></div>
+        </div>
+        <div class="social-section">
+          <h3 data-en="Follow Us" data-de="Folge uns">Follow Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section">
+    <div class="map-header">
+      <h2 data-en="Find Us in Ruhpolding" data-de="Finden Sie uns in Ruhpolding">Find Us in Ruhpolding</h2>
+      <p data-en="We're located in the heart of the Bavarian Alps. Free parking and public transit nearby."
+         data-de="Wir befinden uns im Herzen der Bayerischen Alpen. Kostenlose Parkplätze & ÖPNV vorhanden.">
+        We're located in the heart of the Bavarian Alps. Free parking and public transit nearby.
+      </p>
+    </div>
+    <div id="contact-map"></div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="faq-header">
+      <h2 data-en="Frequently Asked Questions" data-de="Häufige Fragen">Frequently Asked Questions</h2>
+      <p data-en="Quick answers to common questions about our services and tours."
+         data-de="Schnelle Antworten auf häufige Fragen zu unseren Services und Touren.">
+        Quick answers to common questions about our services and tours.
+      </p>
+    </div>
+    <div class="faq-container">
+      <div class="faq-item">
+        <button class="faq-question" data-en="Do I need previous experience?" data-de="Brauche ich Vorerfahrung?">
+          Do I need previous experience?<i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer">
+          <p data-en="No, we offer experiences for all levels. Our guides will help you feel safe and supported."
+             data-de="Nein, wir bieten Erlebnisse für alle Levels. Unsere Guides unterstützen dich sicher und kompetent.">
+            No, we offer experiences for all levels. Our guides will help you feel safe and supported.
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" data-en="What if the weather is bad?" data-de="Was passiert bei schlechtem Wetter?">
+          What if the weather is bad?<i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer">
+          <p data-en="We monitor weather conditions and reschedule or refund if necessary. Safety comes first."
+             data-de="Wir beobachten das Wetter und verschieben oder erstatten bei Bedarf. Sicherheit geht vor.">
+            We monitor weather conditions and reschedule or refund if necessary. Safety comes first.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section id="newsletter" class="section-p1">
+    <div class="newstext">
+      <h4 data-en="Stay Updated" data-de="Bleib auf dem Laufenden">Stay Updated</h4>
+      <p data-en="Get updates about events, tours and <span>special offers</span>"
+         data-de="Erhalte Updates über Events, Touren und <span>spezielle Angebote</span>">
+         Get updates about events, tours and <span>special offers</span>
+      </p>
+    </div>
+    <div class="form">
+      <input type="email" placeholder="Your email address" data-placeholder-de="Deine E-Mail-Adresse" />
+      <button class="normal" data-en="Subscribe" data-de="Abonnieren">Subscribe</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="section-p1">
+    <div class="col">
+      <h2 class="logo">ExploreRuhpolding</h2>
+      <p><strong data-en="Address:" data-de="Adresse:">Address:</strong> Ruhpolding, Bavaria, Germany</p>
+      <p><strong data-en="Email:" data-de="E-Mail:">Email:</strong> info@exploreruhpolding.com</p>
+      <p><strong data-en="Hours:" data-de="Öffnungszeiten:">Hours:</strong> 08:00 - 18:00, Mon - Sun</p>
+    </div>
+    <div class="col">
+      <h4 data-en="Quick Links" data-de="Schnelle Links">Quick Links</h4>
+      <a href="about.html" data-en="About Us" data-de="Über uns">About Us</a>
+      <a href="contact.html" data-en="Contact" data-de="Kontakt">Contact</a>
+      <a href="terms.html" data-en="Terms & Conditions" data-de="AGB">Terms & Conditions</a>
+    </div>
+    <div class="col">
+      <h4 data-en="Sports" data-de="Sportarten">Sports</h4>
+      <a href="trailrunning.html" data-en="Trail Running" data-de="Trail Running">Trail Running</a>
+      <a href="mountainbiking.html" data-en="Mountain Biking" data-de="Mountainbiking">Mountain Biking</a>
+      <a href="climbing.html" data-en="Climbing" data-de="Klettern">Climbing</a>
+      <a href="paragliding.html" data-en="Paragliding" data-de="Paragliding">Paragliding</a>
+      <a href="skiing.html" data-en="Skiing" data-de="Skifahren">Skiing</a>
+    </div>
+    <div class="copyright">
+      <p>© 2025 ExploreRuhpolding</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+  <script>
+    if (document.getElementById('contact-map')) {
+      initMap('contact-map', getRuhpoldingCoordinates().center, [
+        {
+          lat: 47.7665,
+          lng: 12.6442,
+          name: "Ruhpolding",
+          description: "Welcome to the Bavarian Alps"
+        }
+      ]);
+    }
+  </script>
+</body>
+</html>
+
