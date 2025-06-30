@@ -48,3 +48,5 @@ Navigate to a different subpage using the navigation bar (e.g., go from 'homepag
     - JavaScript
     - Leaflet
     - FontAwesome
+
+FYI: I sadly cannot upload my images/videos here as of now. I'll see if I can figure it out some other time!
